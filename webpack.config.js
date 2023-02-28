@@ -10,7 +10,7 @@ module.exports = {
     output:{
         path: path.resolve(__dirname, 'dist'),
 		filename: 'bundle.js',
-		publicPath: './'
+		publicPath: '/'
     },
     resolve: {
 		extensions: ['.js', '.jsx'],
@@ -52,7 +52,7 @@ module.exports = {
 				],
 			},
             {
-                test: /\.png/,
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource'
             }
         ]

@@ -4,13 +4,14 @@ import { useDispatch, useSelector } from 'react-redux'
 import { setSearch } from '../slices/dataSlice'
 
 
-const Searcher = () => {
+const Searcher = ({toggle}) => {
   const search = useSelector(state => state.search)
   const dispatch = useDispatch()
 
   return (
     <Input.Search placeholder='Pokemon name..' onChange={(e)=>dispatch(setSearch(e.target.value))}
     value={search}
+    disabled={toggle}
     />
     
   )

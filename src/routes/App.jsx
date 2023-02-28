@@ -8,7 +8,7 @@ import {CheckOutlined,CloseOutlined} from '@ant-design/icons'
 import Logo from '../assets/Pokemon.png'
 import { fetchPokemonsWithDetails } from '../slices/dataSlice'
 import { setFiltered } from '../slices/dataSlice'
-
+import NotFound from '../components/NotFound'
 
 
 
@@ -74,7 +74,7 @@ const App = () => {
       </div>
       
       <Col span={8} offset={8}>
-        <Searcher/>
+        <Searcher toggle={toggle}/>
       </Col>
       <Col span={1} offset={1}>
         <Space direction="vertical">
@@ -92,7 +92,7 @@ const App = () => {
       </Col> : ''} 
       {
         ((search.length > 0 && filtered.length == 0) || (toggle==true && filtered.length == 0)) ? 
-        <div>There's no pokemons!</div> :
+        <NotFound/> :
         <ListP pokemons={((filtered.length > 0 && search.length > 0)||(toggle == true)) ? filtered : pokemons}/>
       }
     </div>
