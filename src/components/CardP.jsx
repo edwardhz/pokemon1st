@@ -17,13 +17,13 @@ const CardP = ({pokemon}) => {
   }
   
   const styleDefault = {
-    width:200, 
+    width:'auto', 
     cursor:'default',
     textTransform:'capitalize',
     cursor:'default'
   }
   const styleFavorite = {
-    width:200, 
+    width:'auto', 
     cursor:'default',
     backgroundColor: '#FBAB7E',
     backgroundImage: 'linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)',
