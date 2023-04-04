@@ -9,7 +9,7 @@ const Searcher = ({toggle}) => {
   const dispatch = useDispatch()
 
   return (
-    <Input.Search placeholder='Pokemon name..' onChange={(e)=>dispatch(setSearch(e.target.value))}
+    <Input.Search placeholder='Pokemon name..' onChange={(e)=>dispatch(setSearch(e.target.value.toLowerCase()))}
     value={search}
     disabled={toggle}
     />
